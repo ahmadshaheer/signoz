@@ -10,6 +10,10 @@ import { useParams } from 'react-router-dom';
 import { Props as TraceDetailProps } from 'types/api/trace/getTraceItem';
 
 import { noEventMessage } from './constants';
+import {
+	traceDetails,
+	// traceDetails2
+} from './mock';
 
 function TraceDetail(): JSX.Element {
 	const { id } = useParams<TraceDetailProps>();
@@ -47,7 +51,8 @@ function TraceDetail(): JSX.Element {
 		return <NotFound text={noEventMessage} />;
 	}
 
-	return <TraceDetailContainer response={traceDetailResponse.payload} />;
+	// return <TraceDetailContainer response={traceDetails2} />;
+	return <TraceDetailContainer response={traceDetails} />;
 }
 
 export default TraceDetail;
